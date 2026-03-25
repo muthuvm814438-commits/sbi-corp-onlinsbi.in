@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style></style>
+        </head>
+        <body>
+            
+
+
+
+            <style></style>
+        
+        
+            
+
+
+
+            <style></style>
+        
+        
+            
+
+
+
+            <style></style>
+        
+        
+            
+
+
+
+            <style></style>
+        
+        
+            
+
+
+
+            <style></style>
+        
+        
+            
+
+
+
+            <style>
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+<meta charset="UTF-8">
+<title>SBI Online – Account Summary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f2f2f2;color:#333}
+
+
+/* HEADER */
+.header{
+    background:#fff;
+    padding:6px 15px 0; /* MATCH menu left/right margin */
+}
+
+
+.header-top{display:flex;justify-content:space-between;align-items:center}
+.logo img{height:52px}
+
+/* TOP LINKS */
+.top-links{font-size:12px;white-space:nowrap}
+.top-links span{margin:0 6px}
+.lang{background:#2e7d32;color:#fff;padding:4px 10px;border-radius:3px}
+.logout{color:#d32f2f;font-weight:bold;cursor:pointer;margin-left:8px}
+
+/* OFFER ROW */
+.offer-row{display:flex;justify-content:center;gap:8px;padding:10px 0 8px}
+.offer{display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid #6a4cff;border-radius:3px;font-size:12px;background:#fff;height:34px}
+.offer img{height:16px}
+
+/* MENU */
+/* MAIN BLUE MENU WITH ROUND ICONS */
+.menu{
+    background:#0e7fa4;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:12px 15px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.menu-item{
+    text-align:center;
+    color:#fff;
+    font-size:13px;
+    width:120px;
+}
+
+.menu-item .icon{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 6px;
+}
+
+.menu-item .icon img{
+    width:22px;
+    height:22px;
+}
+
+
+
+/* LOGIN BAR */
+.login-bar{background:#eaeaea;display:flex;justify-content:space-between;padding:10px 30px;font-size:13px}
+.login-right{display:flex;align-items:flex-start;gap:10px}
+.welcome span{color:#7b1fa2;font-weight:bold}
+
+/* LAYOUT */
+.container{display:flex;padding:15px 30px}
+
+/* SIDEBAR */
+.sidebar{width:250px;background:#fff;border:1px solid #ccc;display:flex;flex-direction:column}
+.sidebar h4{background:#4a4a4a;color:#fff;margin:0;padding:10px;font-size:14px}
+.sidebar ul{list-style:none;margin:0;padding:0;flex:1}
+.sidebar li{padding:9px 12px;border-bottom:1px solid #ddd;font-size:13px}
+.sidebar li.active{background:#1e73b7;color:#fff;font-weight:bold}
+
+/* FEATURES */
+.features{background:#cfeeff;padding:12px;font-size:12px;border-top:1px solid #b5d9f0}
+.features b{display:block;margin-bottom:6px}
+.features a{color:#1e73b7;text-decoration:underline}
+.dots{text-align:center;margin-top:10px}
+.dots span{display:inline-block;width:6px;height:6px;background:#aaa;border-radius:50%;margin:0 3px}
+.dots span.active{background:#ff6f00}
+
+/* CONTENT */
+.content{flex:1;margin-left:15px}
+.breadcrumb{background:#1e73b7;color:#fff;padding:8px 12px;font-size:13px}
+.panel{background:#fff;border:1px solid #ccc;margin-top:12px}
+.panel-header{background:#e6f3f9;padding:10px;font-weight:bold;color:#1e73b7}
+.panel-body{padding:15px}
+
+/* TABLE */
+.table{width:100%;border-collapse:collapse;font-size:13px}
+.table th{text-align:left;padding:8px;border-bottom:2px solid #ccc}
+.table td{padding:10px 8px;border-bottom:1px solid #ddd}
+
+/* LINKS */
+.link{color:#1e73b7;text-decoration:underline;cursor:pointer}
+.balance-text{color:#333;text-decoration:none;cursor:default}
+
+/* CAUTION */
+.caution{background:#fff8e1;border:1px solid #f0c36d;padding:12px;margin-top:12px;font-size:12px;display:flex;gap:10px}
+.caution img{height:26px}
+
+/* FLOAT ICONS */
+.float{position:fixed;right:10px;top:260px;display:flex;flex-direction:column;gap:10px}
+.float img{height:30px;width:30px}
+
+/* FOOTER */
+.footer-top{height:4px;background:#0a6fb5;margin-top:30px}
+.footer{background:#3a3a3a;color:#fff;font-size:12px}
+.footer-links{text-align:right;padding:10px 30px}
+.footer-links a{color:#fff;text-decoration:none;margin-left:15px}
+.footer-bottom{background:#2f2f2f;padding:10px 30px;display:flex}
+.footer-bottom .left{width:25%}
+.footer-bottom .center{width:50%;text-align:center;font-size:11px}
+.footer-bottom .right{width:25%}
+/* === FIX ACCOUNT SUMMARY & TRANSACTION BANNER WIDTH === */
+
+/* Account Summary (blue bar) */
+.breadcrumb{
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Transaction Accounts (light blue bar) */
+.panel-header{
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure panel does not add extra width */
+.panel{
+    padding: 0;
+}
+/* VIEW PROFILE STATUS BUTTON */
+.profile-status-btn{
+    display:inline-block;
+    margin-top:6px;
+    padding:4px 10px;
+    background:#2e7d32;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    border-radius:3px;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.profile-status-btn:hover{
+    background:#256428;
+}
+/* ===== SBI PAYMENTS / TRANSFERS DROPDOWN ===== */
+.menu-item{
+    position:relative;
+}
+
+.submenu{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:280px;
+    background:#fff;
+    border:1px solid #cfcfcf;
+    box-shadow:0 3px 8px rgba(0,0,0,0.25);
+    display:none;
+    z-index:9999;
+    padding:4px 0;
+}
+
+.menu-item:hover .submenu{
+    display:block;
+}
+
+.submenu a{
+    display:block;
+    padding:8px 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    color:#333;
+    text-decoration:none;
+    border-bottom:1px solid #e6e6e6;
+    line-height:1.4;
+    background:#fff;
+}
+
+.submenu a:last-child{
+    border-bottom:none;
+}
+
+.submenu a:hover{
+    background:#f3f7fb;
+    color:#000;
+}
+
+/* Hindi text – EXACT SBI look */
+.submenu a .hi{
+    font-size:13px;
+    color:#555;
+}
+/* ===== SBI BENEFICIARY PAGE – PIXEL FIX ===== */
+
+#beneficiaryView{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#beneficiaryView .panel{
+    border:1px solid #cfcfcf;
+}
+
+#beneficiaryView .panel-header{
+    background:#e6f3f9;
+    color:#005ea6;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 12px;
+}
+
+#beneficiaryView .panel-body{
+    padding:18px 20px;
+    font-size:13px;
+    color:#333;
+}
+
+/* mandatory note */
+#beneficiaryView .mandatory{
+    color:#c00;
+    font-size:12px;
+    margin-bottom:18px;
+}
+
+/* form table */
+#beneficiaryView table{
+    border-collapse:collapse;
+}
+
+#beneficiaryView td{
+    padding:6px 8px;
+    vertical-align:middle;
+}
+
+/* label */
+#beneficiaryView .label{
+    width:200px;
+    font-weight:bold;
+}
+
+/* input */
+#beneficiaryView input[type=password]{
+    width:280px;
+    height:24px;
+    border:1px solid #9bbcff;
+    padding:2px 4px;
+    font-size:13px;
+}
+
+/* checkbox row */
+#beneficiaryView .checkbox{
+    font-size:12px;
+    padding-left:200px;
+}
+
+/* forgot link */
+#beneficiaryView .forgot{
+    font-size:12px;
+    padding-left:200px;
+}
+
+/* buttons – SBI exact position */
+#beneficiaryView .btn-row{
+    padding-left:200px;
+    padding-top:12px;
+}
+
+#beneficiaryView button{
+    background:#c47a00;
+    color:#fff;
+    border:none;
+    padding:4px 14px;
+    font-size:12px;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+#beneficiaryView button + button{
+    margin-left:6px;
+}
+
+/* BENEFICIARY TILE PAGE */
+.beneficiary-tiles{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px 40px;
+    padding:10px 20px 20px;
+}
+
+.tile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:13px;
+}
+
+.tile img{
+    width:36px;
+    height:36px;
+}
+
+.tile a{
+    color:#005ea6;
+    text-decoration:none;
+}
+
+.tile a:hover{
+    text-decoration:underline;
+}
+
+.new{
+    color:#c00;
+
+    font-size:11px;
+    margin-left:6px;
+}
+
+.info-text{
+    font-size:12px;
+    color:#333;
+}
+
+.red{
+    color:#c00;
+}
+/* REMOVE UNDERLINE FROM MAIN MENU HEADINGS ONLY */
+.menu a,
+.menu a:hover,
+.menu a:focus,
+.menu a:active{
+    text-decoration: none !important;
+}
+/* OTHER BANK BENEFICIARY – EXACT LOOK */
+.form-table{
+    width:100%;
+    font-size:13px;
+    border-collapse:collapse;
+}
+
+.form-table td{
+    padding:6px 8px;
+    vertical-align:middle;
+}
+
+.form-table td:first-child{
+    width:260px;
+    color:#333;
+}
+
+.form-table input[type=text]{
+    width:345px;
+    height:24px;
+    border:1px solid #c0c0c0;
+    padding:2px 4px;
+    font-size:13px;
+}
+
+.hint{
+    color:#777;
+    font-size:12px;
+}
+
+.tab-btn{
+    background:#e0e0e0;
+    border:1px solid #bdbdbd;
+    padding:5px 10px;
+    font-size:12px;
+    cursor:pointer;
+    margin-right:4px;
+}
+
+.tab-btn.active{
+    background:#e0e0e0;
+    color:#ff;
+}
+
+.sbi-btn{
+    background:#c47a00;
+    color:#ffFf;
+    border:none;
+    padding:5px 16px;
+    font-size:12px;
+    border-radius:3px;
+    cursor:pointer;
+    margin-right:6px;
+  
+}
+.btn-center{
+    text-align:center;
+    margin-top:18px;
+}
+/* FORCE password input to match normal text input size */
+.sbi-input{
+    width: 360px;              /* SAME as SBI textbox */
+    height: 26px;              /* SAME height */
+    padding: 2px 6px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Masking without resizing */
+.sbi-input[type="password"]{
+    letter-spacing: 2px;       /* SBI-style dots */
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* SBI CONFIRM OVERLAY */
+#sbiOverlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:9998;
+}
+
+/* CONFIRM BOX */
+#sbiConfirmBox{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:430px;
+    background:#fff;
+    border-radius:6px;
+    padding:22px 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#333;
+    text-align:center;
+    z-index:9999;
+    box-shadow:0 5px 18px rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+.confirm-text{
+    line-height:1.6;
+}
+
+/* BUTTONS */
+.confirm-actions{
+    margin-top:20px;
+}
+
+.confirm-btn{
+    background:#c47a00;      /* SBI exact brown */
+    color:#ffffff;
+    border:1px solid #8b4f00;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+
+.confirm-btn + .confirm-btn{
+    margin-left:10px;
+}
+
+/* FIX: make Account Number same length as other inputs */
+.form-table input.sbi-input{
+    width:345px !important;
+    height:24px !important;
+    padding:2px 4px !important;
+    box-sizing:border-box;
+}
+
+/* SBI RESET BUTTON – ACTIVE */
+.sbi-reset-btn{
+    background:#e0e0e0;          /* SBI grey */
+    color:#000;
+    border:1px solid #9e9e9e;
+    padding:5px 16px;
+    font-size:12px;
+    border-radius:3px;
+    cursor:pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.sbi-reset-btn:hover{
+    background:#d5d5d5;
+}
+
+.sbi-reset-btn:active{
+    background:#c8c8c8;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.25);
+}
+/* FIX: Make Submit & Reset buttons EXACT SAME SIZE */
+.btn-center button{
+    min-width: 90px;          /* same width */
+    height: 28px;             /* same height */
+    padding: 4px 16px;        /* same padding */
+    font-size: 12px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Submit button exact SBI brown */
+.btn-center button:first-child{
+    background:#c47a00;
+    color:#ffffff;
+    border:1px solid #8b4f00;
+}
+
+/* Reset button exact SBI grey */
+.btn-center .sbi-reset-btn{
+    background:#c47a00;
+    color:#ffffff;
+    border:1px solid #8b4f00;
+}
+
+
+</style>
+
+
+
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo"><img src="images/sbionline.png"></div>
+    <div class="top-links">
+      Skip to Main Content <span>|</span> What's New <span>|</span>
+      Explore YONO Net Banking <span>|</span> About OnlineSBI <span>|</span>
+      Registration Forms
+      <span class="lang">Language ▼</span>
+      <span class="logout" id="logoutBtn">⏻ LOGOUT</span>
+
+    </div>
+  </div>
+
+  <div class="offer-row">
+    <div class="offer"><img src="images/loan.png">Loan offers</div>
+    <div class="offer"><img src="images/fx.png">FX-Retail</div>
+    <div class="offer"><img src="images/home-loan.png">SBI Home Loan</div>
+    <div class="offer"><img src="images/wealth.png">SBI Wealth</div>
+    <div class="offer"><img src="images/interest.png">Interest Rates</div>
+    <div class="offer"><img src="images/otp.png">Secure OTP</div>
+    <div class="offer"><img src="images/care.png">Customer Care</div>
+  </div>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+
+  <a class="menu-item active" href="#">
+    <div class="icon">
+      <img src="images/account.png">
+    </div>
+    My Accounts &amp; Profile
+  </a>
+
+  <div class="menu-item dropdown">
+  <div class="icon">
+    <img src="images/transfer.png">
+  </div>
+  Payments / Transfers
+
+  <div class="submenu">
+    <a href="#" id="addBeneficiaryLink">Add &amp; Manage Beneficiary</a>
+    <a href="#">Funds Transfer (Own SBI A/c)</a>
+    <a href="#">Accounts of Others - Within SBI</a>
+    <a href="#" id="otherBankTransferMenu">Other Bank Transfer</a>
+    <a href="#">IMPS Funds Transfer</a>
+    <a href="#">VAN (Virtual Account Number) Funds Transfer</a>
+    <a href="#">Quick Transfer (Without Adding Beneficiary)</a>
+    <a href="#">More &gt;&gt;</a>
+  </div>
+</div>
+
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/bill.png">
+    </div>
+    Bill Payments
+  </a>
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/deposit.png">
+    </div>
+    Deposit &amp; Investment
+  </a>
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/tax.png">
+    </div>
+    e-Tax
+  </a>
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/services.png">
+    </div>
+    e-Services
+  </a>
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/request.png">
+    </div>
+    Request &amp; Enquiries
+  </a>
+
+  <a class="menu-item" href="#">
+    <div class="icon">
+      <img src="images/links.png">
+    </div>
+    Useful Links
+  </a>
+
+</div>
+
+
+
+<!-- LOGIN BAR -->
+<div class="login-bar">
+  <div>
+  <b>Last Login Date &amp; Time</b><br>
+  <span id="lastLogin">30-Dec-2025 [5:20 AM IST]</span><br>
+  <a class="profile-status-btn">View Profile Status</a>
+</div>
+
+
+  <div class="login-right">
+    <img src="images/emergency.png" style="height:44px">
+    <div class="welcome">
+      Welcome<br>
+      <span>Royal Groups &amp; Co</span><br>
+      royalgroupsofficial@gmail.com<br>
+      <span id="currentTime">30-Dec-2025 [7:54 AM IST]</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h4>Quick Links</h4>
+<ul>
+<li class="active">Account Summary</li>
+<li>Account Statement</li>
+<li>Profile</li>
+<li>e-Statement</li>
+<li>Pending Statement</li>
+<li>Spend Analyzer</li>
+<li>Know your CIBIL Score</li>
+<li>SBI Rewardz</li>
+<li>Select your Segment</li>
+<li>Set Favourite Links</li>
+</ul>
+
+<div class="features">
+<b>FEATURES / OFFERS</b>
+Open Demat account with zero A/c opening charges
+<a href="#">Click Here</a>
+<div class="dots"><span></span><span></span><span class="active"></span><span></span></div>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- SUMMARY VIEW -->
+<div id="summaryView" style="display: block;">
+<div class="breadcrumb">You are here : My Accounts &amp; Profile / Account Summary</div>
+<div class="panel">
+<div class="panel-header">Transaction Accounts</div>
+<div class="panel-body">
+<table class="table">
+<tbody><tr>
+<th>Account No. / Name</th>
+<th>Branch</th>
+<th>Available Balance</th>
+<th>Transactions</th>
+</tr>
+<tr>
+<td>ROYAL GROUPS &amp; CO </td>
+<td>T NAGAR CHENNAI</td>
+<td id="bal" class="link">Click here for balance</td>
+<td class="link">Click here for last 10 transactions</td>
+</tr>
+</tbody></table>
+
+<div class="link" style="text-align:center;margin-top:15px" onclick="showBalances()">
+View All Balances
+</div>
+</div>
+</div>
+</div>
+<!-- ADD & MANAGE BENEFICIARY VIEW -->
+<div id="beneficiaryView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Add &amp; Manage Beneficiary
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Add &amp; Manage Beneficiary</div>
+
+    <div class="panel-body">
+
+      <div class="mandatory">
+        Mandatory fields are marked with an asterisk (*)
+      </div>
+
+      <table>
+        <tbody><tr>
+          <td class="label">
+            Profile Password <span style="color:red">*</span>
+          </td>
+          <td>
+            <input type="password">
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td class="checkbox">
+            <label>
+              <input type="checkbox">
+              Use Multilingual Image-based Virtual Key Board
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td class="forgot">
+            <a href="#" class="link">Forgot Profile Password</a>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td></td>
+
+          <td class="btn-row">
+           <button onclick="submitProfilePassword()">Submit</button>
+
+            <button type="reset" class="sbi-reset-btn">Reset</button>
+
+          </td>
+        </tr>
+      </tbody></table>
+
+    </div>
+  </div>
+</div>
+<!-- BENEFICIARY OPTIONS VIEW -->
+<div id="beneficiaryTilesView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Add &amp; Manage Beneficiary
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Add &amp; Manage Beneficiary</div>
+
+    <div class="panel-body beneficiary-tiles">
+
+      <div class="tile">
+        <img src="images/sbi_beneficiary.png">
+        <a href="#">SBI Beneficiary (Account holder of SBI / एस बी आई का खाताधारक)</a>
+      </div>
+
+      <div class="tile">
+        <img src="images/other_bank.png">
+        <a href="#" id="otherBankBeneficiaryLink">
+           Other Bank Beneficiary (Account holder of other banks / अन्य बैंकों का खाताधारक)
+          </a>
+
+      </div>
+
+      <div class="tile">
+        <img src="images/imps.png">
+        <a href="#">IMPS Beneficiary</a>
+
+      </div>
+
+      <div class="tile">
+        <img src="images/nre.png">
+        <a href="#">Outward Remittance Beneficiary for NRE / FCNR (B) Account</a>
+      </div>
+
+      <div class="tile">
+        <img src="images/nps.png">
+        <a href="#">NPS Beneficiary</a>
+      </div>
+
+      <div class="tile">
+        <img src="images/van.png">
+        <a href="#">VAN (Virtual Account Number) Beneficiary</a>
+      </div>
+
+      <div class="tile">
+        <img src="images/foreign.png">
+        <a href="#">Foreign Outward Remittance Beneficiary <span class="new">New</span></a>
+      </div>
+
+      <div class="tile">
+        <img src="images/nepal.png">
+        <a href="#">Indo Nepal Beneficiary <span class="new">New</span></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:10px">
+    <div class="panel-body info-text">
+      Select a link in the list to access specific functionality.
+      <br><br>
+      <span class="red">
+        CARE: Only four beneficiaries can be added in a day.
+      </span>
+    </div>
+  </div>
+
+</div>
+<!-- OTHER BANK BENEFICIARY VIEW -->
+<div id="otherBankBeneficiaryView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : My Accounts &amp; Profile / Profile / 
+    Other Bank Beneficiary (Account holder of other banks / अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Manage Other Bank Beneficiary</div>
+
+    <div class="panel-body" style="padding:20px 30px">
+
+      <div style="margin-bottom:12px">
+        <button class="tab-btn active">Add</button>
+        <button class="tab-btn">Modify</button>
+        <button class="tab-btn">Delete</button>
+        <button class="tab-btn">Verify Beneficiary Name</button>
+        <button class="tab-btn">Approve</button>
+      </div>
+
+      <div class="mandatory">
+        Mandatory fields are marked with an asterisk (*)
+      </div>
+
+      <p style="font-size:13px;color:#005ea6;margin-bottom:18px">
+        Enter beneficiary name, account number and address. Provide the limit upto which you wish to transfer funds to this beneficiary in a day.
+      </p>
+
+      <table class="form-table">
+        <tbody><tr>
+          <td>Name <span class="red">*</span></td>
+          <td><input type="text"></td>
+        </tr>
+
+        <tr>
+          <td>Account Number <span class="red">*</span></td>
+          <td><input type="password" class="sbi-input" inputmode="numeric">
+         </td>
+        </tr>
+
+        <tr>
+          <td>Confirm Account Number <span class="red">*</span></td>
+          <td><input type="text"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="padding-top:10px">
+            <b>Select the IFSCcode option if you know the IFSCcode. Else, select location.</b>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <label><input type="radio" checked=""> IFS Code</label>
+            &nbsp;&nbsp;
+            <label><input type="radio"> Location</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>IFS Code <span class="red">*</span></td>
+          <td>
+            <input type="text" id="ifscInput" onblur="fetchIfscDetails()">
+
+            <a href="#" class="link">Verify Beneficiary Name</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Address1</td>
+          <td><input type="text"> <span class="hint">(Door No, Street Name)</span></td>
+        </tr>
+
+        <tr>
+          <td>Address2</td>
+          <td><input type="text"> <span class="hint">(Locality, City)</span></td>
+        </tr>
+
+        <tr>
+          <td>Address3</td>
+          <td><input type="text"> <span class="hint">(State, PIN Code)</span></td>
+        </tr>
+
+        <tr>
+          <td>Other Banks Transfer Limit (INR) <span class="red">*</span></td>
+          <td><input type="text"> <span class="hint">(Maximum limit: 2500000)</span></td>
+        </tr>
+
+        <tr>
+          <td>Mobile Number</td>
+          <td>91-XXXXXXXX00</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <label>
+              <input type="checkbox">
+              I accept the <a href="#" class="link">Terms and Conditions</a>
+            </label>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <p class="red" style="margin-top:14px">
+        CARE: Only four beneficiaries can be added in a day. Please do not add more than four beneficiaries in a day.
+      </p>
+
+      <div class="btn-center">
+      <button type="button" onclick="showSbiConfirm()">Submit</button>
+
+
+       <button type="button" class="sbi-reset-btn" onclick="resetOtherBankForm()">Reset</button>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- NEFT TRANSFER VIEW (EXACT SBI STRUCTURE) -->
+<div id="neftTransferView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Fund Transfer / Other Bank Transfer (अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">NEFT Transfer</div>
+
+    <div class="panel-body" style="padding:18px 20px;font-size:13px">
+
+      <div style="color:red;font-size:12px;margin-bottom:10px">
+        Mandatory fields are marked with an asterisk (*)
+      </div>
+
+      <div style="color:#005ea6;font-weight:bold;margin-bottom:6px">
+        Select the account from which you wish to transfer funds
+      </div>
+
+      <!-- DEBIT ACCOUNT TABLE -->
+      <table class="table">
+        <tbody><tr>
+          <th>Account No. / Nick Name</th>
+          <th>Account Type</th>
+          <th>SBI Branch</th>
+          <th style="text-align:right">Balance</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" checked="">
+            &nbsp;ROYAL GROUPS &amp; CO
+          </td>
+          <td>Current Account</td>
+          <td>T NAGAR CHENNAI</td>
+          <td style="text-align:right" id="neftBalanceCell">0.00</td>
+        </tr>
+      </tbody></table>
+
+      <!-- AMOUNT -->
+      <table class="form-table" style="margin-top:14px">
+        <tbody><tr>
+          <td style="width:260px">
+            Amount <span class="red">*</span>
+          </td>
+          <td>
+            <input type="text" style="width:360px;height:26px">
+            &nbsp;INR
+            <div class="hint">Enter Valid Amount</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="#" class="link">
+              Click here to add a new Other Bank Beneficiary / Change Limit
+            </a>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            Purpose <span class="red">*</span>
+          </td>
+          <td>
+            <select style="width:360px;height:26px">
+              <option>Deposit / Investment</option>
+            </select>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <!-- BENEFICIARY -->
+      <div style="margin-top:14px;font-weight:bold">
+        Select the Beneficiary account
+      </div>
+
+      <table class="table" style="margin-top:6px">
+  <tbody><tr>
+    <th>Account No</th>
+    <th>Beneficiary Name</th>
+    <th>Branch</th>
+    <th>Bank</th>
+    <th style="text-align:right">Limit</th>
+  </tr>
+  </tbody><tbody id="neftBeneficiaryTable"></tbody>
+</table>
+
+
+      <!-- SCHEDULE -->
+      <div style="margin-top:14px;font-weight:bold;text-align:center">
+  Select a schedule option
+</div>
+
+<div style="margin-top:8px;text-align:center">
+
+  <label style="margin-right:18px">
+    <input type="radio" name="scheduleOption" checked="">
+    Pay Now
+  </label>
+
+  <label style="margin-right:18px">
+    <input type="radio" name="scheduleOption">
+    Schedule Later
+  </label>
+
+  <label>
+    <input type="radio" name="scheduleOption">
+    Standing Instruction
+  </label>
+
+</div>
+
+
+      <div style="margin-top:10px;color:#c00;font-size:12px">
+        Please note, Beneficiary Account Number and IFSC information will ONLY be used for Electronic Fund Transfer.
+      </div>
+
+      <div style="margin-top:10px">
+        <label>
+          <input type="checkbox">
+          I accept the Terms and Conditions
+        </label>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="btn-center" style="margin-top:18px">
+        <button class="sbi-btn" onclick="submitNEFT()">Submit</button>
+
+        <button class="sbi-reset-btn" onclick="cancelNeftConfirm()">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="panel" style="margin-top:10px">
+    <div class="panel-body" style="background:#fff4e5;font-size:12px">
+      <ul style="margin:0;padding-left:18px">
+        <li>You can request for trusted Other Bank transfer from any of your Accounts.</li>
+        <li>RTGS/NEFT transactions may be delayed during RBI cut-off timings.</li>
+        <li>Standing instruction is permitted up to 5 years.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- NEFT FINAL CONFIRM VIEW (EXACT SBI) -->
+<div id="neftFinalConfirmView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Fund Transfer / Other Bank Transfer (अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      Outside SBI - Other Bank Beneficiary
+    </div>
+
+    <div class="panel-body" style="padding:20px 25px;font-size:13px">
+
+      <p style="color:#005ea6;font-weight:bold">
+        Verify details and confirm this transaction
+      </p>
+
+      <p style="margin-top:14px;font-weight:bold">
+        Debit Account Details
+      </p>
+
+      <table class="form-table">
+        <tbody><tr><td style="width:260px">SBI Account No</td><td>00000032635076402</td></tr>
+        <tr><td>Account Type</td><td>Current Account</td></tr>
+        <tr><td>SBI Branch</td><td>T NAGAR CHENNAI</td></tr>
+        <tr><td>Credit to Beneficiary</td><td>INR <span id="nf_amount"></span></td></tr>
+        <tr><td>Commission Amount</td><td>INR 0.00 Goods and Service Tax</td></tr>
+        <tr><td>Total Debit Amount</td><td>INR <span id="nf_amount2"></span></td></tr>
+        <tr><td>Total Debit Amount (in words)</td><td id="nf_amount_words"></td></tr>
+        <tr><td>Purpose</td><td>Deposit / Investment</td></tr>
+      </tbody></table>
+
+      <p style="margin-top:18px;font-weight:bold">
+        Credit Account Details
+      </p>
+
+      <table class="table" style="margin-top:6px">
+        <tbody><tr>
+          <th>Account Number</th>
+          <th>Beneficiary Name</th>
+          <th>Bank Name</th>
+          <th>Branch Name</th>
+        </tr>
+        <tr>
+          <td id="nf_bene_account"></td>
+          <td id="nf_bene_name"></td>
+          <td id="nf_bank"></td>
+          <td id="nf_branch"></td>
+        </tr>
+      </tbody></table>
+
+      <div class="btn-center" style="margin-top:18px">
+        <button class="sbi-btn" onclick="openNeftOtp()">Confirm</button>
+        <button class="sbi-reset-btn" onclick="cancelFinalConfirm()">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INFO PANEL -->
+  <div class="panel" style="margin-top:10px">
+    <div class="panel-body" style="background:#fff4e5;font-size:12px">
+      <ul style="margin:0;padding-left:18px">
+        <li style="color:red">
+          Payments to beneficiaries registered with old IFSC codes of amalgamated banks which have been discontinued will fail.
+        </li>
+        <li style="color:red">
+          Kindly re-register beneficiaries with new IFSC and account numbers after deleting existing beneficiaries having obsolete IFSC/account details.
+        </li>
+        <li>
+          Your bank does not ask for account/ATM password. Please beware of fraudulent entities.
+        </li>
+        <li>
+          For a hassle-free transaction experience, ensure your daily TPT limit is sufficient.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- NEFT OTP / HIGH SECURITY PASSWORD VIEW -->
+<div id="neftOtpView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Fund Transfer / Other Bank Transfer (अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      High security transaction password
+    </div>
+
+    <div class="panel-body" style="padding:20px 25px;font-size:13px">
+
+      <p style="margin-bottom:14px">
+        Enter high security password received in your Mobile Phone
+      </p>
+
+      <table class="form-table">
+        <tbody><tr>
+          <td style="width:260px">
+            Enter High Security Password <span class="red">*</span>
+          </td>
+          <td>
+            <input type="password" style="width:360px;height:26px">
+          </td>
+        </tr>
+      </tbody></table>
+
+      <div class="btn-center" style="margin-top:18px">
+        <button class="sbi-btn" onclick="confirmOtpAndFinish()">Confirm</button>
+        <button class="sbi-reset-btn">Reset</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OTP RESEND PANEL -->
+  <div class="panel" style="margin-top:10px">
+    <div class="panel-body" style="background:#e0f7f4;display:flex;align-items:center;gap:20px">
+
+      <img src="images/otp_phone.png" style="height:70px">
+
+      <div style="font-size:13px">
+        If you did not receive the High Security Password on SMS, you can
+        <br><br>
+        <button style="
+          background:#00796b;
+          color:#fff;
+          border:none;
+          padding:6px 14px;
+          border-radius:4px;
+          cursor:pointer
+        ">
+          Click here to resend the OTP
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- NEFT TRANSACTION SUCCESS VIEW (SBI EXACT STYLE) -->
+<div id="neftSuccessView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here: Payments / Transfers / Fund Transfer / Other Bank Transfer (अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div style="
+    background:#e3f4dd;
+    border:1px solid #b7ddb1;
+    padding:20px;
+    margin-top:12px;
+    font-size:13px;
+  ">
+
+    <!-- TOP STATUS -->
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+      <div style="
+        width:32px;
+        height:32px;
+        border-radius:50%;
+        background:#4caf50;
+        color:#fff;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:18px;
+      ">✓</div>
+
+      <div>
+        <div style="color:#2e7d32;font-weight:bold">
+          Please note this transaction number for future reference:
+          <span id="ns_ref_top"></span>
+        </div>
+
+        <div style="margin-top:6px">
+          <b>Debit Transaction Status :</b>
+          <span style="color:#2e7d32">Completed Successfully</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEBIT ACCOUNT DETAILS -->
+    <div style="margin-top:14px;font-weight:bold;color:#1b5e20">
+      Debit Account Details
+    </div>
+
+    <table class="table" style="margin-top:6px;background:#e3f4dd">
+      <tbody><tr>
+        <th>SBI Account Number</th>
+        <th>Account Type</th>
+        <th>SBI Branch</th>
+        <th>Amount</th>
+        <th>Transaction Type</th>
+        <th>UTR Number</th>
+      </tr>
+      <tr>
+        <td id="ns_sbi_acc"></td>
+        <td>Current Account</td>
+        <td id="ns_branch"></td>
+        <td id="ns_amount"></td>
+        <td>NEFT</td>
+        <td id="ns_utr"></td>
+      </tr>
+    </tbody></table>
+
+    <!-- CREDIT ACCOUNT DETAILS -->
+    <div style="margin-top:18px;font-weight:bold;color:#1b5e20">
+      Credit Account Details
+    </div>
+
+    <table class="table" style="margin-top:6px;background:#e3f4dd">
+      <tbody><tr>
+        <th>Account No.</th>
+        <th>Bank</th>
+        <th>Branch</th>
+        <th>Transfer Type</th>
+        <th>Amount</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td id="ns_bene_account"></td>
+        <td id="ns_bank"></td>
+        <td id="ns_branch2"></td>
+        <td>NEFT</td>
+        <td id="ns_amount2"></td>
+        <td>Deposit / Investment</td>
+      </tr>
+    </tbody></table>
+
+    <!-- PRINT -->
+    <div style="text-align:center;margin-top:18px">
+      <button class="sbi-btn" onclick="printNeftReceipt()">Print</button>
+
+    </div>
+
+    <!-- LINKS -->
+    <div style="margin-top:20px;font-size:12px">
+      <a href="#" class="link">View Balance in debit account</a><br><br>
+
+      For NEFT Transactions, the final status of credit to account with other bank
+      will be available under 'Status' column in 'Status Enquiry' link.<br><br>
+
+      <a href="#" class="link" onclick="openNEFT()">Return to Other Bank Transfer page</a><br><br>
+
+      ⭐ <a href="#" class="link">Add to Favourites</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- SBI CONFIRM POPUP -->
+<div id="sbiOverlay"></div>
+
+<div id="sbiConfirmBox">
+  <div class="confirm-text">
+    Your financial well-being is our priority. Make sure you know the beneficiary being added.
+    Be cautious of scams involving promises of high returns or fraudsters impersonating government officials.
+    Stay vigilant!
+    <br><br>
+    Do you want to proceed?
+  </div>
+
+  <div class="confirm-actions">
+    <button class="confirm-btn" onclick="confirmBeneficiary()">Ok</button>
+    <button class="confirm-btn" onclick="closeSbiConfirm()">Cancel</button>
+  </div>
+</div>
+<!-- CONFIRM BENEFICIARY VIEW -->
+<div id="confirmBeneficiaryView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : My Accounts &amp; Profile / Profile / 
+    Other Bank Beneficiary (Account holder of other banks / अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Manage Other Bank Beneficiary</div>
+
+    <div class="panel-body" style="padding:20px 30px">
+
+      <p style="color:#c47a00;font-weight:bold;margin-bottom:14px">
+        Please confirm the below details
+      </p>
+
+      <table class="form-table">
+        <tbody><tr><td>Name</td><td id="c_name"></td></tr>
+        <tr><td>Account No</td><td id="c_account"></td></tr>
+        <tr><td>Address1</td><td id="c_addr1"></td></tr>
+        <tr><td>Address2</td><td id="c_addr2"></td></tr>
+        <tr><td>Address3</td><td id="c_addr3"></td></tr>
+        <tr><td>Other Banks Transfer Limit(INR)</td><td id="c_limit"></td></tr>
+        <tr><td>IFS Code</td><td id="c_ifsc"></td></tr>
+        <tr><td>Mobile Number</td><td>91-XXXXXXXX00</td></tr>
+      </tbody></table>
+
+      <div class="btn-center" style="margin-top:20px">
+        <button class="sbi-btn">Confirm</button>
+        <button class="sbi-reset-btn" onclick="cancelConfirm()">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- BENEFICIARY SUCCESS VIEW -->
+<div id="beneficiarySuccessView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : My Accounts &amp; Profile / Profile / 
+    Other Bank Beneficiary (Account holder of other banks / अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Manage Other Bank Beneficiary</div>
+
+    <div class="panel-body" style="padding:18px 22px">
+
+      <!-- GREEN SUCCESS BOX -->
+      <div style="
+        background:#e5f6df;
+        border:1px solid #b7e1b0;
+        padding:16px;
+        border-radius:4px;
+        font-size:13px;
+        color:#2e7d32;
+      ">
+
+        <p style="margin:0 0 12px 0">
+          <b><span id="s_name"></span></b> has been added successfully as your Beneficiary.
+          You have to approve this beneficiary within the current session in order to make an Other Bank Transfer.
+        </p>
+
+        <p style="margin:0 0 16px 0">
+          <b><span id="s_bank"></span> / <span id="s_branch"></span></b> is both RTGS and NEFT enabled.
+        </p>
+
+        <!-- DETAILS TABLE -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tbody><tr style="color:#1b5e20">
+            <th style="text-align:left;padding:6px">Beneficiary Account No.</th>
+            <th style="text-align:left;padding:6px">Bank</th>
+            <th style="text-align:left;padding:6px">Branch</th>
+            <th style="text-align:left;padding:6px">IFS Code</th>
+          </tr>
+
+          <tr style="border-top:1px solid #cde8c6">
+            <td style="padding:8px" id="s_account"></td>
+            <td style="padding:8px" id="s_bank2"></td>
+            <td style="padding:8px" id="s_branch2"></td>
+            <td style="padding:8px" id="s_ifsc"></td>
+          </tr>
+        </tbody></table>
+
+        <div style="margin-top:12px">
+          <a href="#" class="link">Approve now</a>
+        </div>
+      </div>
+  
+
+
+      <!-- INFO NOTE -->
+      <div style="
+        margin-top:14px;
+        background:#fff4e5;
+        border:1px solid #f0c36d;
+        padding:12px;
+        font-size:12px;
+      ">
+        <ul style="margin:0;padding-left:18px">
+          <li>You have to approve an RTGS / NEFT beneficiary in order to make an Other Bank Transfer</li>
+          <li>The minimum amount for an RTGS transaction is Rs.2,00,000/-</li>
+          <li>You have to approve this beneficiary within the current session in order to make an Other Bank Transfer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- OTHER BANK TRANSFER PAGE -->
+<div id="otherBankTransferView" style="display:none">
+
+  <div class="breadcrumb">
+    You are here : Payments / Transfers / Fund Transfer / Other Bank Transfer (अन्य बैंकों का खाताधारक)
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      Outside SBI - Other Bank Transfer
+    </div>
+
+    <div class="panel-body" style="padding:20px 30px;font-size:13px">
+
+      <p>
+        Use the Other Bank transfer service to send money to beneficiaries holding accounts in other bank accounts.
+        Please note that bank service charges will be applicable for Other Bank transfer.
+      </p>
+
+      <p style="margin-top:18px;color:#005ea6;font-weight:bold">
+        Select Payment Option
+      </p>
+
+      <table class="form-table" style="margin-top:10px">
+        <tbody><tr>
+          <td style="width:260px">
+            Transaction Type <span class="red">*</span>
+          </td>
+          <td>
+            <label><input type="radio" name="txnType"> IMPS</label>
+            &nbsp;&nbsp;
+            <label><input type="radio" name="txnType"> RTGS</label>
+            &nbsp;&nbsp;
+            <label><input type="radio" name="txnType"> NEFT</label>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <div style="text-align:center;margin-top:20px">
+        <button class="sbi-btn" onclick="openNEFT()">Proceed</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INFO BOX -->
+  <div class="panel" style="margin-top:12px">
+    <div class="panel-body" style="background:#fff4e5;font-size:12px">
+
+      <ul style="margin:0;padding-left:18px">
+        <li>If you have any hidden accounts, please unhide through Profile &gt; Manage A/c Display.</li>
+        <li>The schedule for processing RTGS/NEFT transactions is as under.</li>
+      </ul>
+
+      <table class="table" style="margin-top:12px">
+        <tbody><tr>
+          <th>Transaction Type</th>
+          <th>Timing</th>
+          <th>Availability</th>
+        </tr>
+        <tr>
+          <td>RTGS</td>
+          <td>24 x 7 (Available at all times)</td>
+          <td>All Days</td>
+        </tr>
+        <tr>
+          <td>NEFT</td>
+          <td>24 x 7 (Available at all times)</td>
+          <td>All Days</td>
+        </tr>
+      </tbody></table>
+
+      <ul style="margin-top:12px;padding-left:18px">
+        <li>NEFT transactions will be processed 24 x 7 as per RBI settlement cycles.</li>
+        <li>Minimum amount for RTGS is ₹2,00,000.</li>
+        <li>RTGS transactions are credited on the same day.</li>
+      </ul>
+
+      <p style="color:red;margin-top:10px">
+        For a hassle-free experience, ensure your daily TPT limit is sufficient.
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+
+<!-- BALANCE VIEW -->
+<div id="balanceView" style="display: none;">
+<div class="breadcrumb">You are here : My Accounts &amp; Profile / Account Summary</div>
+<div class="panel">
+<div class="panel-header">Transaction Accounts</div>
+<div class="panel-body">
+<table class="table">
+<tbody><tr>
+<th>Account No. / Name</th>
+<th>Branch</th>
+<th>Balance</th>
+</tr>
+<tr>
+<td>ROYAL GROUPS &amp; CO</td>
+<td>T NAGAR CHENNAI</td>
+<td id="balanceViewAmount">INR 0.00</td>
+</tr>
+</tbody></table>
+
+<div style="text-align:center;margin-top:15px">
+<button onclick="backToSummary()">Back</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="caution">
+<img src="images/light1.png">
+<div>
+• If you have any hidden accounts, please unhide through Profile → Manage A/c Display.<br>
+• Capital Gains Plus Account can be viewed under Deposit Accounts.
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- FLOAT ICONS -->
+<div class="float">
+<img src="images/history.png">
+<img src="images/light.png">
+<img src="images/share.png">
+<img src="images/help.png">
+<img src="images/like.png">
+<img src="images/whatsapp.png">
+</div>
+
+<!-- FOOTER -->
+<div class="footer-top"></div>
+<div class="footer">
+<div class="footer-links">
+<a href="#">Privacy Statement</a>
+<a href="#">Disclosure</a>
+<a href="#">Terms of Service (Terms &amp; Conditions)</a>
+</div>
+<div class="footer-bottom">
+<div class="left">© State Bank of India</div>
+<div class="center">
+Site best viewed at 1024 x 768 resolution in Microsoft Edge 79 +, Mozilla 96 +, Google Chrome 97 +
+</div>
+<div class="right"></div>
+</div>
+</div>
+
+<script>
+// ===== GLOBAL ACCOUNT DATA =====
+let availableBalance = 11064578698.20; // INR
+
+// ===== GLOBAL BENEFICIARY STORE =====
+let beneficiaries = [];
+
+// ===== NEFT TEMP STORAGE =====
+let neftConfirmData = {};
+
+
+
+function formatINR(amount){
+  return amount.toLocaleString("en-IN", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+
+function formatTime(d){
+  const m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let h=d.getHours(),amp=h>=12?"PM":"AM";
+  h=h%12||12;
+  return `${String(d.getDate()).padStart(2,'0')}-${m[d.getMonth()]}-${d.getFullYear()} [${h}:${String(d.getMinutes()).padStart(2,'0')} ${amp} IST]`;
+}
+
+function updateTimes(){
+  const now = new Date(); // REAL system / internet time (already IST)
+
+  // last login = 2 hours 34 minutes before
+  const lastLogin = new Date(now.getTime() - (2*60 + 34) * 60 * 1000);
+
+  document.getElementById("currentTime").textContent = formatTime(now);
+  document.getElementById("lastLogin").textContent  = formatTime(lastLogin);
+}
+
+
+updateTimes();
+setInterval(updateTimes, 60000);
+
+/* balance click (unchanged) */
+document.getElementById("bal").onclick = () => {
+  const el = document.getElementById("bal");
+  el.textContent = "INR " + formatINR(availableBalance);
+  el.className = "balance-text";
+};
+
+
+
+function showBalances(){
+  hideAllViews();
+
+  document.getElementById("balanceViewAmount").textContent =
+    "INR " + formatINR(availableBalance);
+
+  document.getElementById("balanceView").style.display = "block";
+}
+
+function backToSummary(){
+  hideAllViews();
+  document.getElementById("summaryView").style.display = "block";
+}
+
+document.getElementById("logoutBtn").onclick = function () {
+  window.location.href = "login.html";
+};
+document.getElementById("addBeneficiaryLink").onclick = function(e){
+  e.preventDefault();
+  hideAllViews();
+  document.getElementById("beneficiaryView").style.display = "block";
+};
+
+
+function submitProfilePassword(){
+  hideAllViews();
+  document.getElementById("beneficiaryTilesView").style.display = "block";
+}
+
+document.getElementById("otherBankBeneficiaryLink").onclick = function(e){
+  e.preventDefault();
+  hideAllViews();
+  document.getElementById("otherBankBeneficiaryView").style.display = "block";
+};
+
+function showSbiConfirm(){
+    document.getElementById("sbiOverlay").style.display = "block";
+    document.getElementById("sbiConfirmBox").style.display = "block";
+}
+
+function closeSbiConfirm(){
+    document.getElementById("sbiOverlay").style.display = "none";
+    document.getElementById("sbiConfirmBox").style.display = "none";
+}
+
+function confirmBeneficiary(){
+
+  // hide popup
+  closeSbiConfirm();
+
+  // hide form
+  document.getElementById("otherBankBeneficiaryView").style.display = "none";
+
+  // read entered values
+  const form = document.getElementById("otherBankBeneficiaryView");
+
+  const values = form.querySelectorAll("input[type=text], input[type=password]");
+
+  document.getElementById("c_name").textContent   = values[0].value;
+  document.getElementById("c_account").textContent= values[1].value;
+  document.getElementById("c_addr1").textContent  = values[4].value;
+  document.getElementById("c_addr2").textContent  = values[5].value;
+  document.getElementById("c_addr3").textContent  = values[6].value;
+  document.getElementById("c_limit").textContent  = values[7].value;
+  document.getElementById("c_ifsc").textContent   = values[3].value;
+
+  // show confirm page
+  document.getElementById("confirmBeneficiaryView").style.display = "block";
+}
+
+function cancelConfirm(){
+  document.getElementById("confirmBeneficiaryView").style.display = "none";
+  document.getElementById("otherBankBeneficiaryView").style.display = "block";
+}
+function resetOtherBankForm(){
+
+  const container = document.getElementById("otherBankBeneficiaryView");
+
+  // Clear all text & password inputs
+  container.querySelectorAll('input[type="text"], input[type="password"]').forEach(input => {
+    input.value = "";
+  });
+
+  // Reset radio buttons (IFS Code checked)
+  const radios = container.querySelectorAll('input[type="radio"]');
+  if (radios.length > 0) {
+    radios[0].checked = true;   // IFS Code
+    for (let i = 1; i < radios.length; i++) {
+      radios[i].checked = false;
+    }
+  }
+
+  // Uncheck all checkboxes
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+  });
+}
+let fetchedBank = "";
+let fetchedBranch = "";
+
+function fetchIfscDetails(){
+
+  const ifsc = document.getElementById("ifscInput").value.trim().toUpperCase();
+
+  if(ifsc.length < 8) return;
+
+  fetch("https://ifsc.razorpay.com/" + ifsc)
+    .then(res => {
+      if(!res.ok) throw new Error("Invalid IFSC");
+      return res.json();
+    })
+    .then(data => {
+      fetchedBank   = data.BANK.toUpperCase();
+      fetchedBranch = data.BRANCH.toUpperCase();
+
+      console.log("Bank:", fetchedBank);
+      console.log("Branch:", fetchedBranch);
+    })
+    .catch(err => {
+      fetchedBank = "";
+      fetchedBranch = "";
+      alert("Invalid IFSC Code");
+    });
+}
+function confirmBeneficiary(){
+
+  closeSbiConfirm();
+
+  const form = document.getElementById("otherBankBeneficiaryView");
+  const inputs = form.querySelectorAll("input[type=text], input[type=password]");
+
+  const beneficiary = {
+    account: inputs[1].value,
+    name: inputs[0].value,
+    branch: fetchedBranch || "UNKNOWN BRANCH",
+    bank: fetchedBank || "UNKNOWN BANK",
+    limit: inputs[7].value
+  };
+
+  // 🔥 STORE BENEFICIARY
+  beneficiaries.push(beneficiary);
+
+  // fill success page
+  document.getElementById("s_name").textContent    = beneficiary.name;
+  document.getElementById("s_account").textContent = beneficiary.account;
+  document.getElementById("s_ifsc").textContent    = document.getElementById("ifscInput").value;
+
+  document.getElementById("s_bank").textContent    = beneficiary.bank;
+  document.getElementById("s_branch").textContent  = beneficiary.branch;
+  document.getElementById("s_bank2").textContent   = beneficiary.bank;
+  document.getElementById("s_branch2").textContent = beneficiary.branch;
+
+  hideAllViews();
+  document.getElementById("beneficiarySuccessView").style.display = "block";
+}
+
+function showConfirmPage(){
+
+  closeSbiConfirm(); // close popup
+
+  const form = document.getElementById("otherBankBeneficiaryView");
+
+  const name    = form.querySelectorAll("input[type=text]")[0].value;
+  const account = form.querySelectorAll("input[type=password]")[0].value;
+  const limit   = form.querySelectorAll("input[type=text]")[3].value;
+  const ifsc    = document.getElementById("ifscInput").value.toUpperCase();
+
+  // Fill confirm page
+  document.getElementById("c_name").textContent    = name;
+  document.getElementById("c_account").textContent = account.replace(/./g,"X");
+  document.getElementById("c_limit").textContent   = limit;
+  document.getElementById("c_ifsc").textContent    = ifsc;
+  document.getElementById("c_bank").textContent    = fetchedBank;
+  document.getElementById("c_branch").textContent  = fetchedBranch;
+  document.getElementById("c_mobile").textContent  = "91-XXXXXXXX00";
+
+  // switch views
+  document.getElementById("otherBankBeneficiaryView").style.display = "none";
+  document.getElementById("beneficiaryConfirmView").style.display   = "block";
+}
+document.getElementById("otherBankTransferMenu").onclick = function(e){
+  e.preventDefault();
+
+  // hide ALL views
+  [
+    "summaryView",
+    "balanceView",
+    "beneficiaryView",
+    "beneficiaryTilesView",
+    "otherBankBeneficiaryView",
+    "confirmBeneficiaryView",
+    "beneficiarySuccessView"
+  ].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.style.display="none";
+  });
+
+  // show Other Bank Transfer page
+  document.getElementById("otherBankTransferView").style.display="block";
+};
+function hideAllViews(){
+  const views = [
+    "summaryView",
+    "balanceView",
+    "beneficiaryView",
+    "beneficiaryTilesView",
+    "otherBankBeneficiaryView",
+    "otherBankTransferView",
+    "neftTransferView",
+    "neftFinalConfirmView",
+    "neftOtpView",
+    "confirmBeneficiaryView",
+    "beneficiarySuccessView",
+    "neftSuccessView"
+  ];
+
+  views.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "none";
+  });
+}
+
+
+
+
+function openNEFT(){
+  hideAllViews();
+
+  document.getElementById("neftBalanceCell").textContent =
+    formatINR(availableBalance);
+
+  loadNeftBeneficiaries();   // 🔥 THIS LINE
+
+  document.getElementById("neftTransferView").style.display = "block";
+}
+
+function loadNeftBeneficiaries(){
+
+  const tbody = document.getElementById("neftBeneficiaryTable");
+  tbody.innerHTML = "";
+
+  if(beneficiaries.length === 0){
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align:center;color:#777">
+          No beneficiaries added
+        </td>
+      </tr>`;
+    return;
+  }
+
+  beneficiaries.forEach((b, index) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>
+        <input type="radio" name="neftBeneficiary" ${index===0?"checked":""}>
+        ${b.account}
+      </td>
+      <td>${b.name}</td>
+      <td>${b.branch}</td>
+      <td>${b.bank}</td>
+      <td style="text-align:right">${formatINR(b.limit)}</td>
+    `;
+
+    tbody.appendChild(row);
+  });
+}
+function numberToWordsINR(amount){
+
+  const a = [
+    '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven',
+    'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen',
+    'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'
+  ];
+
+  const b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty',
+             'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+  function inWords(num){
+    if (num < 20) return a[num];
+    if (num < 100) return b[Math.floor(num / 10)] + (num % 10 ? ' ' + a[num % 10] : '');
+    if (num < 1000) return a[Math.floor(num / 100)] + ' Hundred' + (num % 100 ? ' ' + inWords(num % 100) : '');
+    if (num < 100000) return inWords(Math.floor(num / 1000)) + ' Thousand' + (num % 1000 ? ' ' + inWords(num % 1000) : '');
+    if (num < 10000000) return inWords(Math.floor(num / 100000)) + ' Lakh' + (num % 100000 ? ' ' + inWords(num % 100000) : '');
+    return inWords(Math.floor(num / 10000000)) + ' Crore' + (num % 10000000 ? ' ' + inWords(num % 10000000) : '');
+  }
+
+  const rupees = Math.floor(amount);
+  const paise  = Math.round((amount - rupees) * 100);
+
+  let words = 'Rupees ' + inWords(rupees);
+
+  if (paise > 0) {
+    words += ' and ' + inWords(paise) + ' Paise';
+  }
+
+  return words + ' Only';
+}
+
+function submitNEFT(){
+
+  const selected = document.querySelector(
+    'input[name="neftBeneficiary"]:checked'
+  );
+
+  if(!selected){
+    alert("Please select a beneficiary");
+    return;
+  }
+
+  const row = selected.closest("tr");
+
+  const beneAccount = row.cells[0].innerText.replace(/\s+/g,' ').trim();
+  const beneName    = row.cells[1].innerText.trim();
+  const bank        = row.cells[3].innerText.trim();
+  const branch      = row.cells[2].innerText.trim();
+
+  const amountInput = document.querySelector(
+    '#neftTransferView input[type="text"]'
+  );
+
+  if(!amountInput.value){
+    alert("Please enter amount");
+    return;
+  }
+
+  const amount = parseFloat(amountInput.value);
+
+  document.getElementById("nf_amount").textContent  = formatINR(amount);
+  document.getElementById("nf_amount2").textContent = formatINR(amount);
+  document.getElementById("nf_amount_words").textContent =
+  numberToWordsINR(amount);
+
+
+  document.getElementById("nf_bene_account").textContent = beneAccount;
+  document.getElementById("nf_bene_name").textContent    = beneName;
+  document.getElementById("nf_bank").textContent         = bank;
+  document.getElementById("nf_branch").textContent       = branch;
+  neftConfirmData = {
+  amount: amount,
+  sbiAccount: "00000032635076402",
+  branch: "T NAGAR CHENNAI",
+  beneAccount: beneAccount,
+  beneName: beneName,
+  bank: bank,
+  branch2: branch
+};
+
+  hideAllViews();
+  document.getElementById("neftFinalConfirmView").style.display = "block";
+}
+function cancelFinalConfirm(){
+  hideAllViews();
+  document.getElementById("neftTransferView").style.display = "block";
+}
+
+function openNeftOtp(){
+  hideAllViews();                      // 🔥 closes final confirm page
+  document.getElementById("neftOtpView").style.display = "block";
+}
+function confirmOtpAndFinish(){
+
+  // Generate SBI-like UTR & Reference numbers
+  const utr = "SBIN" + Date.now().toString().slice(-10);
+  const ref = "IR00" + Math.random().toString(36).substring(2,8).toUpperCase();
+
+  // Debit details
+  document.getElementById("ns_sbi_acc").textContent = neftConfirmData.sbiAccount;
+  document.getElementById("ns_branch").textContent  = neftConfirmData.branch;
+  document.getElementById("ns_amount").textContent  = formatINR(neftConfirmData.amount);
+  document.getElementById("ns_utr").textContent     = utr;
+  document.getElementById("ns_ref_top").textContent = ref;
+
+  // Credit details
+  document.getElementById("ns_bene_account").textContent = neftConfirmData.beneAccount;
+  document.getElementById("ns_bank").textContent         = neftConfirmData.bank;
+  document.getElementById("ns_branch2").textContent      = neftConfirmData.branch2;
+  document.getElementById("ns_amount2").textContent      = formatINR(neftConfirmData.amount);
+
+  hideAllViews();
+  document.getElementById("neftSuccessView").style.display = "block";
+}
+function printNeftReceipt(){
+
+  const refNo   = document.getElementById("ns_ref_top").textContent;
+  const utrNo   = document.getElementById("ns_utr").textContent;
+  const accNo   = document.getElementById("ns_sbi_acc").textContent;
+  const branch  = document.getElementById("ns_branch").textContent;
+  const amount  = document.getElementById("ns_amount").textContent;
+  const bAcc    = document.getElementById("ns_bene_account").textContent;
+  const bBank   = document.getElementById("ns_bank").textContent;
+  const bBranch = document.getElementById("ns_branch2").textContent;
+
+  const dateStr = new Date().toLocaleString("en-GB").replace(",", "");
+
+  const logoPath =
+    location.origin +
+    location.pathname.replace(/\/[^\/]*$/, "") +
+    "/images/sbi_logo.png";
+
+  const win = window.open("", "_blank");
+
+  win.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<title>SBI – Other Bank Transfer Receipt</title>
+
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:12px;
+  color:#000;
+  margin:20px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.header img{
+  height:32px;
+}
+
+h2{
+  font-size:14px;
+  margin:0;
+  font-weight:bold;
+}
+
+.box{
+  border:1px solid #999;
+  padding:0;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.table th{
+  text-align:left;
+  background:#f2f2f2;
+  font-weight:bold;
+  border:1px solid #ccc;
+  padding:6px;
+}
+
+.table td{
+  border:1px solid #ccc;
+  padding:6px;
+}
+
+.section{
+  background:#f2f2f2;
+  font-weight:bold;
+}
+
+.btns{
+  text-align:center;
+  margin-top:12px;
+}
+
+.btns button{
+  font-size:12px;
+  padding:2px 8px;
+}
+@media print{
+  .btns{display:none}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <img src="https://corp-onlinesbi-sbi.netlify.app/images/sbi.png">
+  <h2>Other Bank Transfer</h2>
+</div>
+
+<div class="box">
+
+<table class="table">
+<tr>
+  <td><b>INB Reference Number</b></td>
+  <td>${refNo}</td>
+  <td style="text-align:right">${dateStr} IST</td>
+</tr>
+<tr>
+  <td><b>Debit Transaction Status</b></td>
+  <td colspan="2">Processed</td>
+</tr>
+
+<tr><td colspan="3" class="section">Debit Account Details</td></tr>
+
+<tr>
+  <th>SBI Account No</th>
+  <th>Account Type</th>
+  <th>SBI Branch</th>
+</tr>
+<tr>
+  <td>${accNo}</td>
+  <td>Current Account</td>
+  <td>${branch}</td>
+</tr>
+
+<tr>
+  <th>Amount</th>
+  <th>Commission Amount</th>
+  <th>Transaction Type</th>
+</tr>
+<tr>
+  <td>INR ${amount}</td>
+  <td>INR 0.00</td>
+  <td>NEFT</td>
+</tr>
+
+<tr>
+  <th colspan="2">UTR Number</th>
+  <th>&nbsp;</th>
+</tr>
+<tr>
+  <td colspan="2">${utrNo}</td>
+  <td>&nbsp;</td>
+</tr>
+
+<tr><td colspan="3" class="section">Credit Account Details</td></tr>
+
+<tr>
+  <th>Account No.</th>
+  <th>Bank</th>
+  <th>Branch</th>
+</tr>
+<tr>
+  <td>${bAcc}</td>
+  <td>${bBank}</td>
+  <td>${bBranch}</td>
+</tr>
+
+<tr>
+  <th>Transfer Type</th>
+  <th>Amount</th>
+  <th>Purpose</th>
+</tr>
+<tr>
+  <td>NEFT</td>
+  <td>${amount}</td>
+  <td>Deposit / Investment</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="btns">
+  <button onclick="window.print()">Print</button>
+  <button onclick="window.close()">Close</button>
+</div>
+
+</body>
+</html>
+`);
+
+  win.document.close();
+  win.focus();
+}
+
+
+
+</script>
+
+
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>

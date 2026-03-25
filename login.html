@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>
+</style>
+        </head>
+        <body>
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+<meta charset="UTF-8">
+<title>SBI Online – Login to OnlineSBI (Clone)</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#333333;
+}
+a{text-decoration:none;color:inherit;}
+
+.page-wrap{
+    max-width:1280px;
+    margin:0 auto;
+}
+
+/* ===== TOP WHITE HEADER ===== */
+.top-header{
+    height:60px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    border-bottom:1px solid #e0e0e0;
+}
+.sbi-logo{
+    height:44px;
+}
+.top-header-right{
+    display:flex;
+    align-items:center;
+    font-size:12px;
+    color:#005a9c;
+    gap:18px;
+}
+.top-header-right a{
+    color:#005a9c;
+}
+.home-link{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+.home-icon{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    border:1px solid #005a9c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+}
+.language-btn{
+    background:#2f9f3b;
+    color:#ffffff;
+    border:none;
+    padding:6px 14px;
+    border-radius:2px;
+    font-size:12px;
+    cursor:pointer;
+}
+
+/* ===== MAIN NAV ===== */
+.main-nav{
+    background:#005a9c;
+    height:40px;
+}
+.main-nav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    height:100%;
+    padding:0 20px;
+}
+.main-nav li{
+    margin-right:40px;
+}
+.main-nav a{
+    color:#ffffff;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* ===== STRIP: Login to OnlineSBI / Welcome text ===== */
+.title-strip{
+    height:32px;
+    background:#f4f4f4;
+    border-bottom:1px solid #d7d7d7;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:11px;
+    padding:0 20px;
+    color:#444444;
+}
+.title-strip strong{
+    font-weight:bold;
+}
+.title-strip-right{
+    color:#005a9c;
+}
+
+/* ===== MAIN CONTENT: LOGIN + BANNER ===== */
+.main-top-row{
+    display:flex;
+    padding:12px 20px 0 20px;
+    gap:16px;
+}
+
+/* LEFT LOGIN PANEL */
+.login-panel{
+    flex:1.3;
+}
+.login-box{
+    border:1px solid #cfd6de;
+    padding:14px 18px 12px 18px;
+    font-size:11px;
+    background:#ffffff;
+}
+.login-box label{
+    font-size:11px;
+    display:block;
+    margin-bottom:4px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    width:100%;
+    height:26px;
+    border:1px solid #bfc7d0;
+    margin-bottom:10px;
+    padding:2px 4px;
+    font-size:12px;
+}
+.login-box .field-note{
+    font-size:10px;
+    margin-bottom:8px;
+}
+.login-links{
+    font-size:10px;
+    margin-bottom:8px;
+}
+.login-links a{
+    color:#005a9c;
+}
+.captcha-box{
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.captcha-options{
+    font-size:11px;
+    margin:6px 0 4px 0;
+}
+.captcha-options input{
+    margin-right:4px;
+}
+.captcha-image{
+    margin:6px 0 8px 0;
+    height:36px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.captcha-placeholder{
+    width:120px;
+    height:32px;
+    background:#f3f3f3;
+    border:1px solid #c0c0c0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    letter-spacing:4px;
+    color:#666666;
+}
+.captcha-refresh{
+    font-size:16px;
+    cursor:pointer;
+}
+.login-buttons{
+    margin-top:6px;
+}
+.login-buttons button{
+    min-width:60px;
+    height:26px;
+    margin-right:6px;
+    border:none;
+    font-size:12px;
+    cursor:pointer;
+}
+.login-buttons .btn-login{
+    background:#005a9c;
+    color:#ffffff;
+}
+.login-buttons .btn-reset{
+    background:#e3e3e3;
+    color:#333333;
+}
+.virtual-note{
+    font-size:10px;
+    margin-top:8px;
+}
+
+/* RIGHT BANNER PANEL */
+.banner-panel{
+    flex:2;
+    border:1px solid #cfd6de;
+    background:#ffffff;
+}
+.banner-top{
+    height:200px;
+    background:#003f7f url("images/rightbanner.png") no-repeat center center;
+    background-size:cover;
+}
+.banner-bottom{
+    background:#3e2a7d;
+    color:#ffffff;
+    font-size:11px;
+    padding:8px 12px;
+}
+.banner-bottom ul{
+    list-style:disc;
+    margin-left:16px;
+}
+.banner-bottom li{
+    margin-bottom:2px;
+}
+
+/* ===== MIDDLE ROW: THREE BOXES ===== */
+.middle-row{
+    display:flex;
+    padding:18px 20px 0 20px;
+    gap:16px;
+    font-size:11px;
+}
+.info-box{
+    flex:1;
+    border:1px solid #cfd6de;
+    background:#f9f9f9;
+    min-height:150px;
+}
+.info-box-header{
+    padding:8px 10px;
+    border-bottom:1px solid #cfd6de;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+.info-icon{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#007ac1;
+    color:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+}
+.info-title{
+    font-weight:bold;
+}
+.info-body{
+    padding:10px 12px 14px 12px;
+}
+
+/* center box links */
+.link-columns{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 20px 12px 20px;
+}
+.link-columns ul{
+    list-style:none;
+}
+.link-columns li{
+    margin-bottom:4px;
+}
+.link-columns a{
+    color:#005a9c;
+}
+
+/* right box */
+.check-icon{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    border:2px solid #2d8f3d;
+    color:#2d8f3d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+/* ===== BOTTOM NOTES ===== */
+.bottom-notes{
+    margin:16px 20px 0 20px;
+    font-size:11px;
+    border-top:1px solid #e0e0e0;
+    padding:8px 10px 14px 18px;
+}
+.bottom-notes ul{
+    list-style:disc;
+}
+.bottom-notes li{
+    margin-bottom:3px;
+}
+
+/* ===== FOOTER ===== */
+.footer-bar{
+    margin-top:10px;
+    border-top:1px solid #c0c0c0;
+    background:#4a4a4a;
+    color:#ffffff;
+    font-size:10px;
+    padding:6px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+}
+.footer-bar .vs-box{
+    width:90px;
+    height:36px;
+    background:#222222;
+    border-radius:3px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+}
+.footer-bottom{
+    background:#e5e5e5;
+    font-size:10px;
+    padding:4px 20px 10px 20px;
+    display:flex;
+    justify-content:space-between;
+    color:#555555;
+}
+</style>
+
+
+
+<div class="page-wrap">
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <img class="sbi-logo" src="images/sbionline.png" alt="SBI Online">
+        <div class="top-header-right">
+            <a href="#" class="home-link">
+                <span class="home-icon">🏠</span>
+                <span>SBI Home Loan</span>
+            </a>
+            <a href="#">About OnlineSBI</a>
+            <a href="#">Forms</a>
+            <a href="#">Net Banking Branches</a>
+            <button class="language-btn">Language ▾</button>
+        </div>
+    </div>
+
+    <!-- MAIN NAV -->
+    <div class="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products &amp; Services</a></li>
+            <li><a href="#">How Do I (Help)</a></li>
+            <li><a href="#">Manage Debit Card E-Mandate</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- STRIP -->
+    <div class="title-strip">
+        <div><strong>Login to OnlineSBI</strong></div>
+        <div class="title-strip-right">Welcome to Personal Internet Banking</div>
+    </div>
+
+    <!-- TOP CONTENT ROW -->
+    <div class="main-top-row">
+
+        <!-- LEFT LOGIN PANEL -->
+        <div class="login-panel">
+            <div class="login-box">
+                <div style="font-size:11px;margin-bottom:10px;">
+                    <strong>CARE:</strong> (Username and password are case sensitive.)
+                </div>
+
+                <label>Username*</label>
+                <input type="text" id="username">
+
+                <div class="login-links">
+                    <a href="#">New User ? Register here/Activate</a><br>
+                    <a href="#">Forgot Username / Login Password</a>
+                </div>
+
+                <label>Password*</label>
+                <input type="password" id="password">
+
+                <label>Enter the text as shown in the image*</label>
+                <input type="text" id="captchaInput">
+
+                <div class="captcha-options">
+                    Select one of the Captcha options*<br>
+                    <label><input type="radio" name="captcha" checked=""> Image Captcha</label>
+                    &nbsp;&nbsp;
+                    <label><input type="radio" name="captcha"> Audio Captcha</label>
+                </div>
+
+                <div class="captcha-image">
+                    <div class="captcha-placeholder" id="captchaText">ZXHE7</div>
+                    <div class="captcha-refresh" id="captchaRefresh" title="Refresh captcha">↻</div>
+                </div>
+
+                <div class="captcha-box" style="margin-top:5px;">
+                    <input type="checkbox" id="vkb">
+                    <label for="vkb" style="display:inline;font-size:11px;">Enable Virtual Keyboard</label>
+                </div>
+
+                <div class="login-buttons">
+                    <button class="btn-login" id="loginBtn">Login</button>
+                    <button class="btn-reset" id="resetBtn">Reset</button>
+                </div>
+
+                <div class="virtual-note">
+                    For better security use the Online Virtual Keyboard to login. <a href="#">More ...</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT BANNER PANEL -->
+        <div class="banner-panel">
+            <div class="banner-top"></div>
+            <div class="banner-bottom">
+                Dear Customer,<br>
+                <ul>
+                    <li>OTP based login &amp; Mandatory login password change after 180 days introduced for added security.</li>
+                    <li>Please do not share OTP/password/user information with anyone. Bank never asks for such information.</li>
+                    <li>For better control &amp; security of your account, you can Lock or Unlock your INB access through link "Lock &amp; Unlock User" available at bottom of this Page.</li>
+                    <li>Mandatory Profile password change after 365 days introduced for added security.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div><!-- /main-top-row -->
+
+    <!-- MIDDLE THREE BOXES -->
+    <div class="middle-row">
+
+        <!-- LEFT BOX -->
+        <div class="info-box">
+            <div class="info-box-header">
+                <div class="info-icon">i</div>
+                <div class="info-title">Important</div>
+            </div>
+            <div class="info-body">
+                NEVER respond to any popup, email, SMS or phone call, no matter how appealing or official looking,
+                seeking your personal information such as username, password(s), mobile number, ATM Card details, etc.
+                Such communications are sent or created by fraudsters to trick you into parting with your credentials.
+            </div>
+        </div>
+
+        <!-- CENTER BOX -->
+        <div class="info-box">
+            <div class="info-box-header">
+                <div class="info-icon">⇄</div>
+                <div class="info-title">Quick Links</div>
+            </div>
+            <div class="link-columns">
+                <ul>
+                    <li><a href="#">Complaints</a></li>
+                    <li><a href="#">Trouble logging in</a></li>
+                    <li><a href="#">Password Management</a></li>
+                    <li><a href="#">Security Tips</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">About Phishing</a></li>
+                    <li><a href="#">Report Phishing</a></li>
+                    <li><a href="#">Lock &amp; Unlock User</a></li>
+                    <li><a href="#">Block ATM Card</a></li>
+                    <li><a href="#">Unlock SBI Authenticator</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT BOX -->
+        <div class="info-box">
+            <div class="info-box-header">
+                <div class="check-icon">✓</div>
+                <div class="info-title">Site Security</div>
+            </div>
+            <div class="info-body">
+                This site is certified by Verisign as a secure and trusted site. All information sent or received in this
+                site is encrypted using 256-bit encryption.
+            </div>
+        </div>
+
+    </div><!-- /middle-row -->
+
+    <!-- BOTTOM NOTES -->
+    <div class="bottom-notes">
+        <ul>
+            <li>Mandatory fields are marked with an asterisk (*).</li>
+            <li>Do not provide your username and password anywhere other than in this page.</li>
+            <li>Your username and password are highly confidential. Never part with them. SBI will never ask for this information.</li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-bar">
+        <div class="vs-box">VeriSign Secured</div>
+        <div>SSL enabled secure site.</div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© State Bank of India (APM Id: Serv_Tran_552)</span>
+        <span>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79+, Mozilla 96+, Google Chrome 97+</span>
+    </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+// ======== CONFIGURABLE CREDENTIALS ========
+const VALID_USERNAME = "RoyalF1";
+const VALID_PASSWORD = "Royalgroups@8144";
+
+let currentCaptcha = "";
+
+// Generate a random 5-character captcha
+function generateCaptcha() {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    let code = "";
+    for (let i = 0; i < 5; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    currentCaptcha = code;
+    const captchaText = document.getElementById("captchaText");
+    if (captchaText) {
+        captchaText.textContent = code;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize captcha on load
+    generateCaptcha();
+
+    // Refresh captcha
+    const refreshBtn = document.getElementById("captchaRefresh");
+    if (refreshBtn) {
+        refreshBtn.addEventListener("click", function () {
+            generateCaptcha();
+        });
+    }
+
+    // Login logic
+    const loginBtn = document.getElementById("loginBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    loginBtn.addEventListener("click", function () {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value;
+        const captchaInput = document.getElementById("captchaInput").value.trim();
+
+        if (!username || !password || !captchaInput) {
+            alert("Please fill all mandatory fields.");
+            return;
+        }
+
+        // Captcha check
+        if (captchaInput.toUpperCase() !== currentCaptcha.toUpperCase()) {
+            alert("Incorrect captcha. Please try again.");
+            document.getElementById("captchaInput").value = "";
+            generateCaptcha();
+            return;
+        }
+
+        // Username / password check
+        if (username === VALID_USERNAME && password === VALID_PASSWORD) {
+            // Success: go to dashboard page
+            window.location.href = "loginsubmit.html"; // make sure this file exists
+        } else {
+            alert("Wrong username / password");
+        }
+    });
+
+    // Reset button clears fields & captcha
+    resetBtn.addEventListener("click", function () {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("captchaInput").value = "";
+        generateCaptcha();
+    });
+});
+</script>
+
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>

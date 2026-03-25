@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>.lw { font-size: 60px; }
+</style>
+        </head>
+        <body>
+             
+
+
+    <meta charset="UTF-8">
+    <title>SBI Online – Personal Banking (Clone)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+    .lw { font-size: 60px; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background:#ffffff;
+        color:#333333;
+    }
+    a{text-decoration:none;color:inherit;}
+
+    .page-wrap{
+        max-width:1280px;
+        margin:0 auto;
+    }
+
+    /* ===== TOP WHITE HEADER ===== */
+    .top-header{
+        height:60px;
+        background:#ffffff;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:0 20px;
+        border-bottom:1px solid #e0e0e0;
+    }
+    .top-header-left{
+        display:flex;
+        align-items:center;
+    }
+    .sbi-logo{
+        height:44px;
+    }
+    .top-header-right{
+        display:flex;
+        align-items:center;
+        font-size:12px;
+        color:#005a9c;
+        gap:18px;
+    }
+    .top-header-right a{
+        color:#005a9c;
+    }
+    .top-header-right .home-link{
+        display:flex;
+        align-items:center;
+        gap:4px;
+    }
+    .home-icon{
+        width:18px;
+        height:18px;
+        border-radius:50%;
+        border:1px solid #005a9c;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:11px;
+    }
+    .language-btn{
+        background:#2f9f3b;
+        color:#ffffff;
+        border:none;
+        padding:6px 14px;
+        border-radius:2px;
+        font-size:12px;
+        cursor:pointer;
+    }
+
+    /* ===== MAIN NAV BAR ===== */
+    .main-nav{
+        background:#005a9c;
+        height:40px;
+    }
+    .main-nav ul{
+        list-style:none;
+        display:flex;
+        align-items:center;
+        height:100%;
+        padding:0 20px;
+    }
+    .main-nav li{
+        margin-right:40px;
+    }
+    .main-nav a{
+        color:#ffffff;
+        font-size:13px;
+        font-weight:bold;
+    }
+
+    /* ===== BIG BANNER ===== */
+    .banner{
+        height:260px;
+        background:linear-gradient(135deg,#66c7f0,#b8e7ff);
+        border-bottom:1px solid #d0e4f7;
+        display:flex;
+        align-items:center;
+        padding:0 20px;
+    }
+    .banner-left{
+        flex:1.6;
+        display:flex;
+        align-items:center;
+    }
+    .banner-graphic{
+        width:760px;
+        height:210px;
+        background:url("images/bannergraphic.png") no-repeat left center;
+        background-size:cover;
+        border-radius:4px;
+        box-shadow:0 0 6px rgba(0,0,0,0.25);
+    }
+
+    .banner-right{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .banner-right .login-btn{
+        background:#005a9c;
+        color:#ffffff;
+        border:none;
+        padding:12px 40px;
+        border-radius:30px;
+        font-size:14px;
+        font-weight:bold;
+        display:flex;
+        align-items:center;
+        gap:8px;
+        cursor:pointer;
+    }
+    .banner-right .login-btn span.icon{
+        font-size:16px;
+    }
+    .banner-right .note{
+        margin-top:16px;
+        font-size:12px;
+        color:#003b64;
+        text-align:center;
+    }
+    .banner-bottom-links{
+        position:absolute;
+        bottom:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:11px;
+        color:#003b64;
+    }
+
+    .banner-inner{
+        position:relative;
+        width:100%;
+        height:100%;
+        display:flex;
+        align-items:center;
+    }
+
+    /* ===== CONSENT STRIP ===== */
+    .consent-strip{
+        border-top:1px solid #e5e5e5;
+        border-bottom:1px solid #e5e5e5;
+        padding:8px 20px;
+        font-size:11px;
+        color:#555555;
+    }
+
+    /* ===== ALWAYS / NEVER BOXES ===== */
+    .advice-row{
+        display:flex;
+        padding:20px;
+        gap:20px;
+    }
+    .advice-box{
+        flex:1;
+        border:1px solid #e0e0e0;
+        background:#f9f9f9;
+    }
+    .advice-header{
+        display:flex;
+        align-items:center;
+        padding:8px 10px;
+        border-bottom:1px solid #e0e0e0;
+        background:#ffffff;
+    }
+    .advice-header .face{
+        width:28px;
+        height:28px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:16px;
+        margin-right:8px;
+    }
+    .face.green{
+        background:#7ac943;
+    }
+    .face.red{
+        background:#ff4b4b;
+        color:#ffffff;
+    }
+    .advice-header .title{
+        font-size:13px;
+        font-weight:bold;
+    }
+    .advice-header .title.green{
+        color:#3b7b2a;
+    }
+    .advice-header .title.red{
+        color:#c22a2a;
+    }
+    .advice-content{
+        padding:18px 10px 24px 10px;
+        text-align:center;
+        font-size:12px;
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title{
+        text-align:center;
+        font-size:13px;
+        font-weight:bold;
+        margin-top:10px;
+        margin-bottom:12px;
+        color:#333333;
+    }
+    .section-title .underline{
+        margin-top:4px;
+        width:80px;
+        height:2px;
+        background:#005a9c;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    /* ===== SECURITY DETAILS ROW ===== */
+    .security-row{
+        display:flex;
+        padding:0 20px 20px 20px;
+        gap:20px;
+        font-size:11px;
+    }
+    .security-col{
+        flex:1;
+        border:1px solid #e0e0e0;
+        background:#f9f9f9;
+    }
+    .security-heading{
+        background:#eeeeee;
+        padding:6px 10px;
+        font-weight:bold;
+    }
+    .security-body{
+        padding:8px 14px 14px 24px;
+    }
+    .security-body ul{
+        list-style:disc;
+    }
+    .security-body li{
+        margin-bottom:4px;
+    }
+
+    /* ===== FOOTER STRIP ===== */
+    .footer-verisign{
+        margin-top:10px;
+        border-top:1px solid #e0e0e0;
+        padding:14px 20px;
+        font-size:11px;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        gap:8px;
+    }
+    .footer-verisign .vs-box{
+        width:90px;
+        height:42px;
+        border-radius:4px;
+        background:#444444;
+        color:#ffffff;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:10px;
+    }
+    .footer-bottom{
+        margin-top:4px;
+        padding:6px 20px 16px 20px;
+        font-size:11px;
+        text-align:right;
+        color:#555555;
+    }
+    .footer-bottom span{
+        margin-left:10px;
+    }
+    </style>
+
+
+
+<div class="page-wrap">
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <img class="sbi-logo" src="images/sbionline.png" alt="SBI Online">
+        </div>
+        <div class="top-header-right">
+            <a href="#" class="home-link">
+                <span class="home-icon">🏠</span>
+                <span>SBI Home Loan</span>
+            </a>
+            <a href="#">About OnlineSBI</a>
+            <a href="#">Forms</a>
+            <a href="#">Net Banking Branches</a>
+            <button class="language-btn">Language ▾</button>
+        </div>
+    </div>
+
+    <!-- MAIN NAV -->
+    <div class="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products &amp; Services</a></li>
+            <li><a href="#">How Do I (Help)</a></li>
+            <li><a href="#">Manage Debit Card E-Mandate</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="banner-inner">
+            <div class="banner-left">
+                <div class="banner-graphic"></div>
+            </div>
+            <div class="banner-right">
+                <button class="login-btn">
+                    CONTINUE TO LOGIN
+                    <span class="icon">➜</span>
+                </button>
+                <div class="note">
+                    Dear Customer, OTP based login is<br>
+                    introduced for added security
+                </div>
+            </div>
+
+            <div class="banner-bottom-links">
+                <a href="#">RBI Limited Liability Policy</a> |
+                <a href="#">Privacy Statement</a> |
+                <a href="#">Disclosure</a> |
+                <a href="#">Terms of Service (Terms &amp; Conditions)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONSENT STRIP -->
+    <div class="consent-strip">
+        By clicking on "Continue to Login" button, you agree to the Terms of Service (Terms &amp; Conditions) of usage of Internet Banking of SBI.
+    </div>
+
+    <!-- ALWAYS / NEVER ROW -->
+    <div class="advice-row">
+        <div class="advice-box">
+            <div class="advice-header">
+                <div class="face green">😊</div>
+                <div class="title green">ALWAYS</div>
+            </div>
+            <div class="advice-content">
+                keep your computer<br>
+                free of malware
+            </div>
+        </div>
+        <div class="advice-box">
+            <div class="advice-header">
+                <div class="face green">😊</div>
+                <div class="title green">ALWAYS</div>
+            </div>
+            <div class="advice-content">
+                change your passwords<br>
+                periodically
+            </div>
+        </div>
+        <div class="advice-box">
+            <div class="advice-header">
+                <div class="face red">☹</div>
+                <div class="title red">NEVER</div>
+            </div>
+            <div class="advice-content">
+                respond to any communication<br>
+                seeking your passwords
+            </div>
+        </div>
+        <div class="advice-box">
+            <div class="advice-header">
+                <div class="face red">☹</div>
+                <div class="title red">NEVER</div>
+            </div>
+            <div class="advice-content">
+                reveal your passwords or<br>
+                card details to anyone
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION TITLE -->
+    <div class="section-title">
+        FOR YOUR OWN SECURITY
+        <div class="underline"></div>
+    </div>
+
+    <!-- SECURITY DETAILS -->
+    <div class="security-row">
+        <div class="security-col">
+            <div class="security-heading">Please ensure the following before logging into OnlineSBI</div>
+            <div class="security-body">
+                <ul>
+                    <li>The URL in your browser address bar begins with "https".</li>
+                    <li>The address or status bar displays the padlock symbol.</li>
+                    <li>Click the padlock to view and verify the security certificate.</li>
+                    <li>Ensure your browser is updated and compatible.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="security-col">
+            <div class="security-heading">Beware of Phishing attacks</div>
+            <div class="security-body">
+                <ul>
+                    <li>Phishing is a fraudulent attempt, usually made through email, phone calls, SMS etc seeking your personal and confidential information.</li>
+                    <li>SBI or its representatives never sends you email/SMS or calls you over phone to get your personal information, password or one time SMS (high security) password.</li>
+                    <li>Never respond to such emails/SMS or phone calls. Report immediately on report.phishing@sbi.co.in if you receive any such email/SMS or Phone call.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER AREA -->
+    <div class="footer-verisign">
+        <div class="vs-box">VeriSign Secured</div>
+        <div style="font-size:10px;">SSL enabled secure site.</div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© State Bank of India</span>
+        <span>Site best viewed at 1024 x 768 resolution in modern browsers.</span>
+    </div>
+
+</div>
+
+<script>
+// redirect "CONTINUE TO LOGIN" button to login.html
+document.addEventListener("DOMContentLoaded", function () {
+    const loginBtn = document.querySelector(".login-btn");
+    if (loginBtn) {
+        loginBtn.addEventListener("click", function () {
+            window.location.href = "login.html"; // <-- target page
+        });
+    }
+});
+</script>
+
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>

